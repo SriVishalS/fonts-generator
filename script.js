@@ -125,7 +125,6 @@ const e_viewAllConversions = document.getElementById('view-all-conversions');
 const e_outputText = document.getElementById('output-text');
 const e_outputList = document.getElementById('output-list');
 
-const e_accessibilityWarning = document.getElementById('accessibility-warning');
 
 // Fetch the fonts.json file and set everything up.
 // To-Do: add a fallback in case the fonts can't be fetched (in case of running offline or something)
@@ -201,10 +200,8 @@ e_viewAllConversions.addEventListener('click', () => {
 	convertTextAll();
 });
 
-// Get rid of the accessibility warning on click.
-e_accessibilityWarning.addEventListener('click', () => {
-	e_accessibilityWarning.style.display = "none";
-}, {'once': true});
+
+
 
 // Copy content to clipboard if the user clicks on the converted text.
 e_outputText.addEventListener('click', () => {
