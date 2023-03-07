@@ -1,85 +1,92 @@
-
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
 
-		<!-- Favicon -->
-		<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
-		<link rel="manifest" href="icons/site.webmanifest">
-		<link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
-		<link rel="shortcut icon" href="icons/favicon.ico">
-		<meta name="msapplication-TileColor" content="#603cba">
-		<meta name="msapplication-config" content="icons/browserconfig.xml">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<title>Fancy Fonts Generator</title>
-        <meta name="title" content="Fancy Fonts Generator">
-        <meta name="description" content="Convert inputted text into beautiful unicode pseudofonts. ">
-        <meta property="og:type" content="website">
-        <meta property="og:url" content="https://waterrmalann.github.io/fancy-fonts-generator/">
-        <meta property="og:title" content="Fancy Fonts Generator">
-        <meta property="og:description" content="Convert inputted text into beautiful unicode pseudofonts. ">
-        <meta property="og:image" content="https://waterrmalann.github.io/fancy-fonts-generator/card.jpg">
-        <meta property="twitter:card" content="summary_large_image">
-        <meta property="twitter:url" content="https://waterrmalann.github.io/fancy-fonts-generator/">
-        <meta property="twitter:title" content="Fancy Fonts Generator">
-        <meta property="twitter:description" content="Convert inputted text into beautiful unicode pseudofonts. ">
-        <meta property="twitter:image" content="https://waterrmalann.github.io/fancy-fonts-generator/card.jpg">
+	<!-- Favicon -->
+	<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+	<link rel="manifest" href="icons/site.webmanifest">
+	<link rel="mask-icon" href="icons/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="icons/favicon.ico">
+	<meta name="msapplication-TileColor" content="#603cba">
+	<meta name="msapplication-config" content="icons/browserconfig.xml">
+	<title>Doodle Fonts</title>
+	<meta name="title" content="Fancy Fonts Generator">
+	<meta name="description" content="Convert inputted text into beautiful unicode pseudofonts. ">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Fancy Fonts Generator">
+	<meta property="og:description" content="Convert inputted text into beautiful unicode pseudofonts. ">
+	<meta property="og:image" content="https://waterrmalann.github.io/fancy-fonts-generator/card.jpg">
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:title" content="Fancy Fonts Generator">
+	<meta property="twitter:description" content="Convert inputted text into beautiful unicode pseudofonts. ">
 
-		<link rel="stylesheet" href="style.css">
-		<meta name="theme-color" content="#30d5c8">
-	</head>
-	
-	<body>
-		<div class="main-container">
-			<div class="container text-align-center sans-serif">
-				<h1 aria-label="Fancy Fonts Bot">𝕱𝖆𝖓𝖈𝖞 𝕱𝖔𝖓𝖙𝖘 𝕲𝖊𝖓𝖊𝖗𝖆𝖙𝖔𝖗</h1>
-				<p>A cool little web app that lets you convert regular text into weird (and cool) unicode pseudofonts.</p>
-				
-			
-				<textarea id="input-text-area" rows="4" cols="60" disabled placeholder="Type something!"></textarea><br>
-				
-				<div class="flex-container">
-					<label class="text-align-center">Select Pseudofont
-						<select id="font-select" name="fontlist" title="Font Selection">
-						</select>
-					</label>
-					<br>
-					
-					<label class="text-align-center">Select Text Style
-						<select id="font-style-select" name="font-styles" title="Style Selection">
-							<option value="shift-normal" selected>None</option>
-							<option value="shift-upper">Uppercase</option>
-							<option value="shift-lower">Lowercase</option>
-							<option value="shift-alternate">Alternate Case</option>
-							<option value="spaced">Spaced</option>
-							<option value="reverse">Reversed</option>
-						</select>
-					</label>
-				</div>
-			</div>
-			
-			<div class="container text-align-center text-size-large">
-				<p title="Click to copy" id="output-text" class="break-all"></p>
-			</div>
-			
-			<div class="container">
-				<details>
-					<summary id="view-all-conversions">View All Fonts</summary>
-					<ul id="output-list" class="break-all">
-					</ul>
-				</details>
-			</div>
-			<div class="container container--thin">
-				<p class="text-size-small sans-serif text-align-center">click on the main generated text to copy</p>
+	<link rel="stylesheet" href="style.css">
+	<meta name="theme-color" content="#30d5c8">
+</head>
+
+<body>
+	<div class="main-container">
+		<h1 class="header">Doodle Fonts</h1>
+		<div class="container text-align-center sans-serif">
+			<h1 aria-label="Fancy Fonts Bot"></h1>
+
+
+			<textarea id="input-text-area" rows="4" cols="60" disabled placeholder="Type something!"
+				class="input1"></textarea><br>
+
+			<div class="flex-container" style="margin-top: 20px;">
+				<label class="text-align-center">Select Pseudofont
+					<select id="font-select" name="fontlist" title="Font Selection"
+						style="border-radius: 30px; border: none; padding: 15px;">
+					</select>
+				</label>
+				<br>
+
+				<label class="text-align-center">Select Text Style
+					<select id="font-style-select" name="font-styles" title="Style Selection">
+						<option value="shift-normal" selected>None</option>
+						<option value="shift-upper">Uppercase</option>
+						<option value="shift-lower">Lowercase</option>
+						<option value="shift-alternate">Alternate Case</option>
+						<option value="spaced">Spaced</option>
+						<option value="reverse">Reversed</option>
+					</select>
+				</label>
 			</div>
 		</div>
 
-		<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
-        <script defer>document.body.innerHTML = twemoji.parse(document.body.innerHTML);</script>
-		<script defer src="script.js"></script>
-	</body>
+		<div class="container text-align-center text-size-large">
+			<p title="Click to copy" id="output-text" class="break-all"></p>
+		</div>
+		<div class="container container--thin">
+			<p class="text-size-small  text-align-center" style="text-transform: capitalize; font-size: large;">
+				&#128161
+				click Over
+				generated text to copy The Font</p>
+		</div>
+		<div class="container" style="display: none;">
+			<details>
+				<summary id="view-all-conversions">View All Fonts</summary>
+				<ul id="output-list" class="break-all">
+				</ul>
+			</details>
+		</div>
+
+	</div>
+	<div class="loaderWrapper">
+
+
+	</div>
+
+
+	<script src="https://twemoji.maxcdn.com/v/latest/twemoji.min.js" crossorigin="anonymous"></script>
+	<script defer>document.body.innerHTML = twemoji.parse(document.body.innerHTML);</script>
+	<script defer src="script.js"></script>
+</body>
+
 </html>
